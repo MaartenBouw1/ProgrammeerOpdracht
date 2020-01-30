@@ -16,4 +16,9 @@ public class Transaction {
         this.endBalance = endBalance;
         this.description = description;
     }
+
+
+    public int getReference() {
+        return reference;
+    }
 }
