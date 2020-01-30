@@ -1,6 +1,6 @@
-import opdracht.FindDuplicate;
+import opdracht.Validation.FindDuplicate;
 import opdracht.Transaction;
-import opdracht.XMLReader;
+import opdracht.FileReader.XMLReader;
 import org.junit.Test;
 
 import java.io.File;

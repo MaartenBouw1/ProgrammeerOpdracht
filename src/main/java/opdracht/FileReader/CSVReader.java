@@ -1,4 +1,6 @@
-package opdracht;
+package opdracht.FileReader;
+
+import opdracht.Transaction;
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -1,5 +1,5 @@
-import opdracht.BalanceValidation;
-import opdracht.CSVReader;
+import opdracht.Validation.BalanceValidation;
+import opdracht.FileReader.CSVReader;
 import opdracht.Transaction;
 import org.junit.Test;
 
