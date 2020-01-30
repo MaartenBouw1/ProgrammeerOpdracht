@@ -1,36 +1,29 @@
 package opdracht;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         File fXmlFile = new File("src\\main\\resources\\records.xml");
         XMLReader xmlReader = new XMLReader();
-        List<Transaction> transactions = xmlReader.getTransactions(fXmlFile);
+        List<Transaction> xmlTransactions = xmlReader.getTransactions(fXmlFile);
+
+        File csvFile = new File("src\\main\\resources\\records.csv");
+        CSVReader csvReader = new CSVReader();
+        List<Transaction> csvTransactions = csvReader.getTransactions(csvFile);
 
         FindDuplicate findDuplicate = new FindDuplicate();
-        List<Transaction> duplicateTransactions = findDuplicate.getDuplicates(transactions);
+        List<Transaction> xmlDuplicateTransactions = findDuplicate.getDuplicates(xmlTransactions);
+        List<Transaction> csvDuplicateTransactions = findDuplicate.getDuplicates(csvTransactions);
 
         BalanceValidation balanceValidation = new BalanceValidation();
-        List<Transaction> incorrectBalance = balanceValidation.validateBalance(transactions);
+        List<Transaction> xmlIncorrectBalance = balanceValidation.validateBalance(xmlTransactions);
+        List<Transaction> csvIncorrectBalance = balanceValidation.validateBalance(csvTransactions);
 
-        System.out.println("The Transaction reference number of these transactions is not unique: ");
-        for (Transaction transaction: duplicateTransactions) {
-            System.out.println("Reference: " + transaction.getReference());
-            System.out.println("Description: " + transaction.getDescription());
-        }
-        System.out.println("_________________________________________________________");
-        System.out.println("The end balance is not correct on these transactions: ");
-        for (Transaction transaction: incorrectBalance) {
-            System.out.println("Reference: " + transaction.getReference());
-            System.out.println("Description: " + transaction.getDescription());
-            System.out.println("Start balance: " + transaction.getStartBalance());
-            System.out.println("Mutation: " + transaction.getMutation());
-            System.out.println("End balance: " + transaction.getEndBalance());
-            System.out.println("-------------------------------------");
-        }
+        PrintReport printReport = new PrintReport();
+        printReport.printReport(xmlDuplicateTransactions, xmlIncorrectBalance);
+        printReport.printReport(csvDuplicateTransactions, csvIncorrectBalance);
     }
 
 }

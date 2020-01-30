@@ -23,7 +23,6 @@ public class XMLReader {
 
             NodeList nList = doc.getElementsByTagName("record");
 
-
             for (int temp = 0; temp < nList.getLength(); temp++) {
 
                 Node nNode = nList.item(temp);
@@ -33,13 +32,13 @@ public class XMLReader {
                     Element eElement = (Element) nNode;
 
                     int reference = Integer.parseInt(eElement.getAttribute("reference"));
-                    String acountNumber = eElement.getElementsByTagName("accountNumber").item(0).getTextContent();
+                    String accountNumber = eElement.getElementsByTagName("accountNumber").item(0).getTextContent();
                     float startBalance = Float.parseFloat(eElement.getElementsByTagName("startBalance").item(0).getTextContent());
                     float mutation = Float.parseFloat(eElement.getElementsByTagName("mutation").item(0).getTextContent());
                     float endBalance = Float.parseFloat(eElement.getElementsByTagName("endBalance").item(0).getTextContent());
                     String description = eElement.getElementsByTagName("description").item(0).getTextContent();
 
-                    Transaction transaction = new Transaction(reference, acountNumber, startBalance, mutation, endBalance, description);
+                    Transaction transaction = new Transaction(reference, accountNumber, startBalance, mutation, endBalance, description);
                     transactions.add(transaction);
                 }
             }
