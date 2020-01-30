@@ -21,4 +21,24 @@ public class Transaction {
     public int getReference() {
         return reference;
     }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public float getStartBalance() {
+        return startBalance;
+    }
+
+    public float getMutation() {
+        return mutation;
+    }
+
+    public float getEndBalance() {
+        return endBalance;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }

@@ -11,7 +11,7 @@ public class FindDuplicate {
             for (int j = i + 1; j < transactions.size(); j++) {
                 if (transactions.get(i).getReference() == transactions.get(j).getReference()) {
                     returnTransactions.add(transactions.get(i));
-
+                    returnTransactions.add(transactions.get(j));
                 }
             }
         }
