@@ -23,7 +23,7 @@ Reference: 112806
 Description: Clothes from Jan Dekker
 -------------------------------------
 Reference: 112806
-Description: Candy for Dani�l de Vries
+Description: Candy for Daniël de Vries
 -------------------------------------
 Reference: 112806
 Description: Subscription from Rik King
