@@ -1,4 +1,4 @@
-#Output:
+# Output:
 The Transaction reference number of these transactions is not unique: 
 _________________________________________________________
 The end balance is not correct on these transactions: 
