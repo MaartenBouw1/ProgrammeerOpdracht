@@ -9,7 +9,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 public class FindDuplicateTest {
-    private File fXmlFile = new File("src\\test\\resources\\records.xml");
+    private File fXmlFile = new File("src/test/resources/records.xml");
 
     @Test
     public void testDuplicateReferences() {

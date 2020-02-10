@@ -9,7 +9,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 public class BalanceValidationTest {
-    private File csvFile = new File("src\\test\\resources\\records.csv");
+    private File csvFile = new File("src/test/resources/records.csv");
 
     @Test
     public void balanceValidationTest() {
