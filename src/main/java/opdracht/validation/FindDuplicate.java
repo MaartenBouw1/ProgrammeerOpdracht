@@ -1,4 +1,4 @@
-package opdracht.Validation;
+package opdracht.validation;
 
 import opdracht.Transaction;
 

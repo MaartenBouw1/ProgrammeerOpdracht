@@ -1,9 +1,9 @@
 package opdracht;
 
-import opdracht.FileReader.CSVReader;
-import opdracht.FileReader.XMLReader;
-import opdracht.Validation.BalanceValidation;
-import opdracht.Validation.FindDuplicate;
+import opdracht.filereader.CSVReader;
+import opdracht.filereader.XMLReader;
+import opdracht.validation.BalanceValidation;
+import opdracht.validation.FindDuplicate;
 
 import java.io.File;
 import java.util.List;

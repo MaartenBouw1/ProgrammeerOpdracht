@@ -1,4 +1,4 @@
-package opdracht.FileReader;
+package opdracht.filereader;
 
 import opdracht.Transaction;
 
